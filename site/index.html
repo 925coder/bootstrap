@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Monitor & Configure etm</title>
+  <link href="content/bootstrap.css" rel="stylesheet" />
+  <!--<link href="content/readable.bootstrap.css" rel="stylesheet" />-->
+  <link href="content/flatly.bootstrap.css" rel="stylesheet" />
+  <link href="content/font-awesome.css" rel="stylesheet" />
+  <link href="content/site.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="page">
+    <div class="navbar navbar-default">
+      <div class="container">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse navHeaderCollapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="#" class="fa fa-home fa-2x"> HOME</a></li>
+            <li><a href="settings.html" class="fa fa-gear fa-2x"> MANAGE </a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section id="body" class="container-fluid">
+      <div class="row col-md-5 col-md-offset-7">
+        Sitting at the heart of your organization, Tradar PMS manages your entire workflow in a way that is intuitive.
+      </div>
+      <section id="main">
+        <button id="addMonitored">Add monitored</button>
+        <div>
+          <h1>Tradar applications </h1>
+          <hr />
+          <div class="row" id="appList">
+            <span class="col-md-3"> <button id="button1" class="btn btn-lg" style="margin-bottom:10px"><i class="fa fa-desktop"></i> TRADARAS </button></span>
+            <span class="col-md-3"><button class="btn btn-danger btn-lg" style="margin-bottom:10px"><i class="fa fa-laptop"></i> ETM - ilias </button></span>
+            <span class="col-md-3"><button class="btn btn-success btn-lg" style="margin-bottom:10px"><i class="fa fa-laptop"></i> PMS - ilias </button></span>
+          </div>
+        </div>
+
+      </section>
+
+      <!--<section id="sidebar" class="col-md-4">
+        <h2>CONTACT US</h2>
+        General Inquiries
+        +1 617 316 1000
+        Americas
+        SalesAmericas@ezesoft.com
+
+        North and Central America
+        Eze OMS & Tradar PMS / +1 212.506.7518
+        RealTick EMS / +1 212 849 4277
+
+        South America
+        +55 21 2546 9814
+        Asia Pacific
+        SalesAPAC@ezesoft.com / +61 2 9220 3733
+        EMEA
+        SalesEMEA@ezesoft.com / +44 (0) 20 7634 8500
+        Thank you for visiting the site, it's a work in progress and we expect it will continue to evolve in the coming weeks.
+        Please stay tuned for updates!
+      </section>-->
+    </section>
+    <br />
+    <footer class="container text-muted text-center">
+      © Eze Software Group. All Rights Reserved.
+    </footer>
+  </div>
+  <script src="content/jquery-1.11.0.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#button1').click(function (btn) {
+        alert("hi");
+        $(this).addClass('btn-danger');
+      });
+
+      // add a monitored element
+      $('#addMonitored').click(function () {
+        var d = $('#appList');
+        d.append(' <span class="col-md-3"><button class="btn btn-success btn-lg" style="margin-bottom:10px"><i class="fa fa-laptop"></i> PMS - ilias </button></span> ');
+      });
+    });
+  </script>
+</body>
+</html>
